@@ -8,11 +8,11 @@ class AgentState(TypedDict):
 
 def first_node(state: AgentState) ->AgentState:
     """this is first node."""
-    state['final']= f"hi {state['name']},how I can help you!"
+    state['final']= f"Hi {state['name']},"
     return state
 def second_node(state: AgentState) -> AgentState:
     """this is second node."""
-    state['final']= state['final'] + f"You are {state['age']} years old!"
+    state['final']= state['final'] + f" You are {state['age']} years old!"
     return state
 graph = StateGraph(AgentState)
 graph.add_node("FIRST", first_node)
